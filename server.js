@@ -26,6 +26,7 @@ app.use((req, res, next) => {
 	if (MAINTENANCE_MODE) {
 		res.render('maintenance.hbs');
 	}
+	next();
 });
 
 app.use(express.static(__dirname + '/public'));
